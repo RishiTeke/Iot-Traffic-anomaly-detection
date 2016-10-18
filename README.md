@@ -25,7 +25,7 @@ In the above case , There is unlikely chance that sensor see the car moving arou
 
 For example, “0,0,0” may mean no traffic, or known bad data, or assumed bad data based on hard limits, such as traffic above a specific density (ouch!). Thus sensor type, capability, and context are all important factors in identifying “bad data”.
 
- 
+ ![This is a title]()
 
 
 If the traffic is completely stopped, a sensor may have very high occupancy – many vehicles sitting at the sensor – but a volume close to 0, as very few vehicles have passed the sensor. This is a common circumstance for sensors at freeway entrances that limit freeway entry, often via lights that only permit one car from one lane to pass every few seconds.
