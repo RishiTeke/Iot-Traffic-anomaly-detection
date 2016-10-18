@@ -11,8 +11,9 @@ The use case for this is from the domain of road traffic: freeway traffic sensor
 a.	Normal and Anomalous Data:
 
 On the basis of speed volume and occupancy parameters from the sensor data following observation can be seen for first 100 records.
-
+![Speed vs volume]( https://github.com/RishiTeke/Iot-Traffic-anomaly-detection/blob/master/spVocc.PNG)
  
+
 
 In the above case , There is unlikely chance that sensor see the car moving around 50-60 mph even though sensor occupancy reading detects that car is at rest , it is highly unlikely case and we can consider it as an anomaly. 
 
