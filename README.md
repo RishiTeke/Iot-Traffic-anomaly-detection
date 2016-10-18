@@ -8,6 +8,11 @@ Anomaly detection is frequently an iterative process where the system, as repres
 
 ####3.	Sample Data:
 The use case for this is from the domain of road traffic: freeway traffic sensors. These sensors report three measures (called “features”): speed, volume, and occupancy, each of which are sampled several times a minute
+
+| speed        | volume           | occupancy  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+
 a.	Normal and Anomalous Data:
 
 On the basis of speed volume and occupancy parameters from the sensor data following observation can be seen for first 100 records.
@@ -37,19 +42,19 @@ In this study, the analysis of which sensors were “similar enough” for the d
 ####4.	Detection of anomaly : 
 So, to detect anomalies: First, identify the common situations (as represented by a large cluster of similar combinations of features), and then identify observations that are sufficiently different from those clusters. You essentially apply two methods from basic statistics: clustering using the most common algorithm, k-means. Then, measure the distance from each observation to the closest cluster, and classify those “far away” as being anomalies. 
 
-a.	K-means Clustering :
+#####a.	K-means Clustering :
 
 k-means clustering is a method of classifying/grouping items into k groups (where k is the number of pre-chosen groups). The grouping is done by minimizing the sum of squared distances (Euclidean distances) between items and the corresponding centroid.
 
-b.	Mahalanobis Distance :
+#####b.	Mahalanobis Distance :
 
 This program uses Mahalanobis distance as the distance measure, as it compensates for differences in units (speed in m.p.h., while volume and occupancy are counts), averages, and scales of the several features which are clustering across.
 
 The Mahalanobis distance has the following properties:
 
-•	It accounts for the fact that the variances in each direction are different.
-•	It accounts for the covariance between variables.
-•	It reduces to the familiar Euclidean distance for uncorrelated variables with unit variance.
+*	It accounts for the fact that the variances in each direction are different.
+*	It accounts for the covariance between variables.
+*	It reduces to the familiar Euclidean distance for uncorrelated variables with unit variance.
 Review the observations that are “distant” from the closest cluster as calculated by that distance calculation. Because these observations are unlike the majority of the other observations, they are considered outliers, and probable anomalies.
 
  
